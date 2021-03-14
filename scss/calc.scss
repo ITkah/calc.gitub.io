@@ -377,13 +377,28 @@
             font: 500 1rem 'Montserrat', sans-serif;
             margin-bottom: 15px;
             text-align: center;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .calc_type_text {
-            text-align: center;
-            padding: 25px 0;
-            font: 400 .87rem/22px 'Montserrat', sans-serif;
+        .calc_type_text_wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+            padding: 15px 0;
             margin-bottom: 15px;
             display: block;
+        }
+        .calc_type_text {
+            font: 400 .87rem/22px 'Montserrat', sans-serif;
+            margin-bottom: 15px;
+            text-align: center;
+            min-height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             &::before {
                 content: '';
