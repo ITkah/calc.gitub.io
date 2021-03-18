@@ -130,8 +130,8 @@
   @media (max-width: 990px) {
     .calc_size_wrap .cacl_size_box {
       display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 40px; } }
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 25px 10px; } }
   .calc_size_wrap .calc_size_box_width {
     display: -webkit-box;
     display: -webkit-flex;
@@ -149,6 +149,8 @@
     position: relative; }
     @media (max-width: 990px) {
       .calc_size_wrap .calc_size_box_width {
+        grid-column-start: 1;
+        grid-column-end: 3;
         height: auto;
         -webkit-box-pack: center;
         -webkit-justify-content: center;
@@ -167,7 +169,10 @@
       top: -80px; }
       @media (max-width: 990px) {
         .calc_size_wrap .calc_size_box_width::after {
-          display: none; } }
+          display: block;
+          width: 98%;
+          left: 1px;
+          top: -65px; } }
     .calc_size_wrap .calc_size_box_width .calc_size_const:first-child {
       position: relative;
       left: -100px;
@@ -215,7 +220,7 @@
       @media (max-width: 576px) {
         .calc_size_wrap .calc_size_box_width .calc_size_const {
           text-align: center;
-          font: 400 .9rem 'Montserrat', sans-serif; } }
+          font: 400 .8rem 'Montserrat', sans-serif; } }
     .calc_size_wrap .calc_size_box_width .calc_size_input {
       display: -webkit-box;
       display: -webkit-flex;
@@ -289,10 +294,13 @@
         -webkit-justify-content: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-            -ms-flex-align: start;
-                align-items: flex-start; } }
+        -webkit-box-align: end;
+        -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
     .calc_size_wrap .calc_size_box_height::after {
       content: '';
       height: 100%;
@@ -303,13 +311,22 @@
       top: 0; }
       @media (max-width: 990px) {
         .calc_size_wrap .calc_size_box_height::after {
-          display: none; } }
+          display: block;
+          left: -125%;
+          height: 97.5%;
+          top: 1px; } }
+      @media (max-width: 380px) {
+        .calc_size_wrap .calc_size_box_height::after {
+          left: -150px; } }
+      @media (max-width: 320px) {
+        .calc_size_wrap .calc_size_box_height::after {
+          left: -155px; } }
     .calc_size_wrap .calc_size_box_height .calc_size_const {
       font: 400 1rem 'Montserrat', sans-serif;
       position: relative; }
       @media (max-width: 576px) {
         .calc_size_wrap .calc_size_box_height .calc_size_const {
-          font: 400 .9rem 'Montserrat', sans-serif;
+          font: 400 .8rem 'Montserrat', sans-serif;
           text-align: center; } }
       .calc_size_wrap .calc_size_box_height .calc_size_const::after {
         content: '';
@@ -354,7 +371,12 @@
               flex-direction: column; }
       @media (max-width: 990px) {
         .calc_size_wrap .calc_size_box_height .calc_size_input {
-          margin: 0 10px; } }
+          margin: 0;
+          -webkit-box-align: end;
+          -webkit-align-items: flex-end;
+              -ms-flex-align: end;
+                  align-items: flex-end;
+          margin: 10px 0; } }
       .calc_size_wrap .calc_size_box_height .calc_size_input input {
         border: 1px solid #B8B8B8;
         -webkit-box-sizing: border-box;
@@ -386,6 +408,10 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    @media (max-width: 990px) {
+      .calc_size_wrap .calc_size_img {
+        grid-column-start: 1;
+        grid-column-end: 3; } }
     .calc_size_wrap .calc_size_img img {
       max-width: 100%;
       -o-object-fit: cover;
