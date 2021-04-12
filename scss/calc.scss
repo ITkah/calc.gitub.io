@@ -79,12 +79,11 @@
     }
     .calc_top_box_active {
         border-bottom: 4px solid #1CAAE6;
-    }
-    .calc_top_box:first-child {
         .calc_top_title {
             color: #1CAAE6;
         }
     }
+    
     .calc_top_box:last-child {
         border: none;
         @media (max-width: 990px) {
@@ -875,4 +874,27 @@
             width: 100%;
         }
     }
+}
+
+.hide_btn_wrap {
+    position: fixed;
+    padding: 0 15px;
+    display: none;
+    z-index: 999;
+    width: 100%;
+    box-sizing: border-box;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-right: 100px;
+}
+
+.hide_btn_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.show {
+    display: block;
 }
